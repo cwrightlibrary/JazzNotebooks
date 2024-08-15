@@ -2,25 +2,6 @@ body {
     color: #242424;
 }
 
-button {
-    font-family: "Inter Tight";
-    font-size: 1em;
-    font-weight: 400;
-    color: #346ed8;
-    background-color: white;
-    cursor: pointer;
-    border: none;
-    text-align: left;
-    outline: none;
-    border-radius: .25em;
-    padding: .5em .5em .5em 1.5em;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #bcd3ff;
-}
-
 h1, h2, p {
     font-family: "Inter";
 }
@@ -43,7 +24,7 @@ h4 {
     margin-bottom: 1em;
 }
 
-li {
+ul {
     font-family: "Inter Tight";
     font-size: .9em;
     font-weight: 400;
@@ -54,7 +35,16 @@ li {
     border-radius: .25em;
     width: 100%;
     list-style-type: none;
-    padding: .25em;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+li {
+    padding-left: 2em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border-radius: .25em;
 }
 
 a:link {
@@ -89,7 +79,33 @@ li:hover {
     float: left;
 }
 
-.nav {
+.collapsible {
+    font-family: "Inter Tight";
+    font-size: 1em;
+    font-weight: 400;
+    color: #346ed8;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-radius: .25em;
+    padding: .5em .5em .5em 1.5em;
+    width: 100%;
+}
+
+.collapsible:hover {
+    background-color: #bcd3ff;
+}
+
+.content {
     margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .1s ease-out;
     line-height: 1.5em;
+}
+
+.content.show {
+    max-height: 100%;
 }
