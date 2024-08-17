@@ -71,11 +71,19 @@ a:link {
     text-decoration: none;
 }
 
+a:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+
 li:hover {
     background-color: var(--accent-grey);
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    background-color: var(--bg);
     border-bottom: 1px solid var(--accent-grey);
     margin: 0;
     padding: 0;
@@ -84,18 +92,21 @@ li:hover {
 
 .main {
     margin: auto;
-    margin-top: 2em;
     margin-left: 30%;
     width: 50%;
     height: 70%;
 }
 
 .sidebar {
+    position: fixed;
     width: 15%;
-    margin-top: 2em;
     margin-left: 10%;
     padding-right: 1em;
     float: left;
+}
+
+.main {
+    margin-top: 5em;
 }
 
 .collapsible {
@@ -127,4 +138,30 @@ li:hover {
 
 .content.show {
     max-height: 100%;
+}
+
+.next-page-button {
+    font-family: "Inter Tight";
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--text);
+    background-color: var(--bg);
+    cursor: pointer;
+    border: 1px solid var(--accent-grey);
+    text-align: left;
+    border-radius: .25em;
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.next-page-button:hover {
+    color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+#next {
+    font-size: .7em;
+    line-height: 2em;
 }
